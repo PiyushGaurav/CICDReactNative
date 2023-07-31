@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Button, Text, View} from 'react-native';
+import Crashes from 'appcenter-crashes';
 
 export default class App extends Component {
   render() {
@@ -12,7 +13,12 @@ export default class App extends Component {
           backgroundColor: '#F5FCFF',
         }}>
         <Text style={{marginVertical: 10}}> Inflation Calc </Text>
-        <Button title="Click me" onPress={() => {}} />
+        <Button
+          title="Click me"
+          onPress={() => {
+            Crashes.generateTestCrash();
+          }}
+        />
       </View>
     );
   }
