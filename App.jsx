@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Text, View} from 'react-native';
 import Crashes from 'appcenter-crashes';
+import Analytics from 'appcenter-analytics';
 
 export default class App extends Component {
   constructor() {
@@ -27,9 +28,12 @@ export default class App extends Component {
         }}>
         <Text style={{marginVertical: 10}}> Inflation Calc </Text>
         <Button
-          title="Click me"
+          title="Calculate Inflation"
           onPress={() => {
-            Crashes.generateTestCrash();
+            Analytics.trackEvent('Calculate_Inflation', {
+              Internet: 'Celular',
+              GPS: 'on',
+            });
           }}
         />
       </View>
