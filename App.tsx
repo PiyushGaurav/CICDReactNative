@@ -16,7 +16,8 @@ export default class App extends Component {
         <Button
           title="Click me"
           onPress={() => {
-            Crashes.generateTestCrash();
+            throw new Error('new error occurred');
+            //Crashes.generateTestCrash();
           }}
         />
       </View>
