@@ -1,3 +1,7 @@
+iOS: [![Build status](https://build.appcenter.ms/v0.1/apps/474b80ea-fd6b-4480-8ed9-2bbf313ef0b5/branches/dev/badge)](https://appcenter.ms)
+
+Android: [![Build status](https://build.appcenter.ms/v0.1/apps/951aa7e8-0bb6-41c2-87b1-c874cbe54484/branches/dev/badge)](https://appcenter.ms)
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
