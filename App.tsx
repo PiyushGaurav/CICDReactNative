@@ -3,6 +3,19 @@ import {Button, Text, View} from 'react-native';
 import Crashes from 'appcenter-crashes';
 
 export default class App extends Component {
+  constructor() {
+    super();
+    this.checkPreviousSession();
+  }
+
+  async checkPreviousSession() {
+    const didCrash = await Crashes.hasCrashedInLastSession();
+    if (didCrash) {
+      const report = await Crashes.lastSessionCrashReport();
+      alert("Sorry about that crash, we're working on it");
+    }
+  }
+
   render() {
     return (
       <View
@@ -16,8 +29,7 @@ export default class App extends Component {
         <Button
           title="Click me"
           onPress={() => {
-            throw new Error('new error occurred');
-            //Crashes.generateTestCrash();
+            Crashes.generateTestCrash();
           }}
         />
       </View>
